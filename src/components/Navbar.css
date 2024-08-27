@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+    z-index: 1; /* Ensure navbar stays on top */
+  }
+  
+  .navbar-logo img {
+    height: 50px; /* Adjust height according to your logo size */
+    margin-left: 5px;
+    width: auto;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar-links a {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: green;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 18px;
+  }
+  
+  .navbar-links a:hover {
+    color: green;
+    text-decoration: underline;
+  }
+  

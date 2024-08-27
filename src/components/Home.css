@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&display=swap');
+.home {
+    height: 100vh; /* Full screen height */
+    width: 100vw;
+    background-image: url('../assets/backgroud.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+  }
+  
+  .overlay {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* font-family: "Matemasie", sans-serif;
+    font-weight: 200; */
+    font-family: "Nerko One";
+    font-weight: 400;
+    padding: 50px;
+    text-align: center;
+    color: #518132;
+    border-radius: 10px;
+  }
+  
+  .overlay h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .overlay p {
+    font-size: 24px;
+  }
+  
+  
