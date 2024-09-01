@@ -1,0 +1,89 @@
+/* Container for centering the auth card */
+.auth-container {
+  height: 100vh; /* Full viewport height */
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Horizontally centers the card */
+  align-items: center; /* Vertically centers the card */
+  background: linear-gradient(135deg, #f0f4c3 0%, #89B958 100%);
+  font-family: "Nerko One", sans-serif; /* Applying font style */
+}
+
+/* Styling the authentication card */
+.auth-card {
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Additional form styling */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card form div {
+  margin-bottom: 15px;
+}
+
+.auth-card form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.auth-card form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.auth-card button {
+  padding: 10px;
+  background-color: #518132;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-card p {
+  margin-top: 20px;
+}
+
+.auth-card span {
+  color: #518132;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* General input styling */
+.auth-card input {
+  width: 100%; /* Full width of the parent container */
+  padding: 12px 15px; /* Padding for a comfortable input field */
+  margin: 8px 0; /* Margin between input fields */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's width and height */
+  border: 2px solid #89B958; /* Green border matching your theme */
+  border-radius: 8px; /* Rounded corners for the inputs */
+  font-size: 16px; /* Comfortable font size */
+  background-color: #f9f9f9; /* Slightly off-white background */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border and shadow */
+  font-weight: bold;
+}
+
+/* Input focus effect */
+.auth-card input:focus {
+  border-color: #518132; /* Darker green on focus */
+  box-shadow: 0 0 5px rgba(81, 129, 50, 0.3); /* Subtle shadow on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Placeholder styling */
+.auth-card input::placeholder {
+  color: #ccc; /* Light grey placeholder color */
+  /* font-style: italic; Italicize the placeholder text */
+}

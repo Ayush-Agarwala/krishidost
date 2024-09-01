@@ -1,13 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&display=swap');
 .card {
     position: relative;
-    width: 100%;
-    max-width: 500px;
+    width: 40%;
+    /* max-width: 300px; */
     margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* More intense shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
   
   .card-image {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -21,12 +30,13 @@
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: first baseline;
     align-items: center;
     color: white;
     border-radius: 10px;
-    opacity: 0;
+    opacity: 0.5;
     transition: opacity 0.3s ease-in-out;
+    font-family: "Nerko One", sans-serif
   }
   
   .card-overlay:hover {

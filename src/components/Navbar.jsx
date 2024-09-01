@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
       <div className="navbar-links">
         <Link to="/">Home</Link>
         <Link to="/about">About Us</Link>
-        <Link to="/pricing">Pricing</Link>
+        <HashLink smooth to="#services">Services</HashLink>
         <Link to="/auth">Login/Sign Up</Link>
       </div>
     </nav>

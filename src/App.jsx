@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 // import About from './components/Temp';
 // import Pricing from './components/Temp';
-// import Auth from './components/Temp';
+import Auth from './components/Auth';
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/auth" element={<Auth />} /> */}
+        {/* <Route path="/about" element={<About />} />*/
+        
+        <Route path="/auth" element={<Auth />} /> }
       </Routes>
     </Router>
   );

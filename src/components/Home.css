@@ -1,37 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&display=swap');
+
+/* Hero Section */
 .home {
     height: 100vh; /* Full screen height */
-    width: 100vw;
-    background-image: url('../assets/backgroud.jpg'); /* Replace with your image URL */
+    width: 98.5vw; /* Full screen width */
+    background-image: url('../assets/backgroud.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     display: flex;
-    align-items: first baseline;
+    align-items: flex-start;
     justify-content: center;
-  }
-  
-  .overlay {
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    /* font-family: "Matemasie", sans-serif;
-    font-weight: 200; */
-    font-family: "Nerko One";
+}
+
+/* Text Overlay */
+.overlay {
+    font-family: "Nerko One", sans-serif;
     font-weight: 400;
     padding: 50px;
     text-align: center;
-    color: #518132;
+    color: #518132; /* Text color */
     border-radius: 10px;
-  }
-  
-  .overlay h1 {
+    /* background-color: rgba(255, 255, 255, 0.4); */
+}
+
+/* Title Styling */
+.overlay h1 {
     font-size: 50px;
     margin-bottom: 20px;
-  }
-  
-  .overlay p {
+}
+
+/* Subtitle Styling */
+.overlay p {
     font-size: 24px;
-  }
-  
-  
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(180deg, #f0f4c3 0%, #89B958 100%);
+}
+
+.services-section {
+    padding: 30px 0;
+    text-align: center;
+    font-size: large;
+    background-color: #f4f4c3;
+    font-family: "Nerko One", sans-serif; 
+    color: #333;
+}
+
+/* Services Header */
+.services-header {
+    text-align: center;
+    font-family: 'Nerko One', sans-serif;
+    font-size: 3rem;
+    color: #518132;
+    background: linear-gradient(90deg, rgba(137, 185, 88, 0.8) 0%, rgba(240, 244, 195, 0.8) 100%);
+    /* background: linear-gradient(180deg, #f0f4c3 0%, #89B958 100%); */
+    padding: 10px 0;
+    /* margin: 50px 0; */
+    /* border-radius: 15px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.services-header:before,
+.services-header:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 20%;
+    top: 50%;
+    background-color: #518132;
+}
+
+.services-header:before {
+    left: 10%;
+}
+
+.services-header:after {
+    right: 10%;
+}
