@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* Hero Section */
 .home {
@@ -30,11 +32,16 @@
 .overlay h1 {
     font-size: 50px;
     margin-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* Subtitle Styling */
 .overlay p {
     font-size: 24px;
+    font-family: "Dancing Script";
+    font-weight: bold;
 }
 
 .card-container{

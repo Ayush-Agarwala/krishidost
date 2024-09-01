@@ -9,8 +9,8 @@ const Home = () => {
       {/* Hero Section */}
       <div className="home">
         <div className="overlay">
-          <h1>Welcome to Our Service</h1>
-          <p>Your success is our priority</p>
+          <h1>Krishi Dost</h1>
+          <p>First friend of a Farmer</p>
         </div>
       </div>
 
