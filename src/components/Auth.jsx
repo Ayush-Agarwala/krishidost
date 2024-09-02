@@ -14,6 +14,10 @@ const Auth = () => {
       <div className="auth-card">
         <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
         <form>
+        {!isLogin && (
+        <div>
+            <input type="text" placeholder="Enter Username" />
+          </div>)}
           <div>
             <input type="email" placeholder="Enter your email" />
           </div>
