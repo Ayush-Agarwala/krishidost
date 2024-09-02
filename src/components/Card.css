@@ -5,6 +5,7 @@
     /* max-width: 300px; */
     margin: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
   }
 
   .card:hover {
@@ -46,9 +47,11 @@
   .card-overlay h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: monospace;
   }
   
   .card-overlay p {
+    font-family: monospace;
     font-size: 16px;
   }
   

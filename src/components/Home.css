@@ -62,7 +62,7 @@
 /* Services Header */
 .services-header {
     text-align: center;
-    font-family: 'Nerko One', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
     color: #518132;
     background: linear-gradient(90deg, rgba(137, 185, 88, 0.8) 0%, rgba(240, 244, 195, 0.8) 100%);
