@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import AboutUs from './components/Aboutus';
 // import About from './components/Temp';
 // import Pricing from './components/Temp';
 import Auth from './components/Auth';
@@ -16,6 +17,7 @@ function App() {
         {/* <Route path="/about" element={<About />} />*/
         
         <Route path="/auth" element={<Auth />} /> }
+        {<Route path="/Aboutus" element={<AboutUs />} /> }
       </Routes>
     </Router>
   );
