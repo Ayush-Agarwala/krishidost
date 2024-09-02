@@ -14,10 +14,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} />*/
+        { <Route path="/about" element={<AboutUs />} />}
         
-        <Route path="/auth" element={<Auth />} /> }
-        {<Route path="/Aboutus" element={<AboutUs />} /> }
+        {<Route path="/auth" element={<Auth />} /> }
       </Routes>
     </Router>
   );

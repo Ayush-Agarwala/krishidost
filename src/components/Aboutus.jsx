@@ -1,9 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './Aboutus.css'; // Import external CSS file
 
 const AboutUs = () => {
     return (
-        <div>
+        <div className='aboutus'>
             <div className="about"><h1>About Us</h1></div>
             <div className="team">
                 <div className="team-member">
@@ -20,7 +21,7 @@ const AboutUs = () => {
                     <img src="ris.jpeg" alt="RISHAV GHATAK" />
                     <h2>RISHAV GHATAK</h2>
                     <p>DATA-SCIENCE & ML DEVELOPER</p>
-                    <p>email: rishavghatak@gmail.com</p>
+                    {/* <p>email: rishavghatak@gmail.com</p> */}
                 </div>
                 <div className="team-member">
                     <img src="person4.jpg" alt="Person 4" />

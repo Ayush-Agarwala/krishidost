@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -46,4 +46,85 @@ body {
 .team-member p {
     font-size: 1em;
     color:#F9E8B7;
+} */
+
+
+
+/* General Styling */
+.aboutus {
+    height: 100vh;
+    width: 95.5vw;
+    padding: 50px 20px;
+    background-color: #F9E8B7;
+    font-family: Ubuntu;
+    color: #34495e;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+.team {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.team-member p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #7f8c8d;
+}
+
+.team-member .email {
+    font-size: 14px;
+    color: #2980b9;
+    word-break: break-word;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .team-member {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about h1 {
+        font-size: 36px;
+    }
 }
