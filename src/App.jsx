@@ -1,25 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import AboutUs from './components/Aboutus';
-// import About from './components/Temp';
-// import Pricing from './components/Temp';
+import AboutUs from './components/AboutUs';
 import Auth from './components/Auth';
 
-function App() {
+const App = () => {
+  const [loggedInUsername, setLoggedInUsername] = useState(null);
+
   return (
     <Router>
-      <Navbar />
+      <Navbar loggedInUsername={loggedInUsername} />
       <Routes>
         <Route path="/" element={<Home />} />
-        { <Route path="/about" element={<AboutUs />} />}
-        
-        {<Route path="/auth" element={<Auth />} /> }
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/auth" element={<Auth setLoggedInUsername={setLoggedInUsername} />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

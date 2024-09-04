@@ -1,13 +1,15 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Authentication.css';
 
-const Auth = () => {
+const Auth = ({ setLoggedInUsername }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
-  const [loggedInUsername, setLoggedInUsername] = useState(null); // New state for logged-in username
+  const navigate = useNavigate();
 
   const toggleAuthMode = () => {
     setIsLogin(!isLogin);
@@ -42,7 +44,8 @@ const Auth = () => {
       } else {
         console.log('Success:', data);
         setLoggedInUsername(data.username); // Store the username after login
-        alert(isLogin ? 'Login successful' : 'Signup successful');
+        //alert(isLogin ? 'Login successful' : 'Signup successful');
+        navigate('/'); // Redirect to home page after login/signup
       }
     } catch (error) {
       console.error('Error:', error);
@@ -52,62 +55,56 @@ const Auth = () => {
 
   return (
     <div className="auth-container">
-      {loggedInUsername ? (
-        <div>
-          <h2>Welcome, {loggedInUsername}!</h2> {/* Display the logged-in username */}
-        </div>
-      ) : (
-        <div className="auth-card">
-          <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
-          <form onSubmit={handleSubmit}>
-            {!isLogin && (
-              <div>
-                <input
-                  type="text"
-                  placeholder="Enter Username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                />
-              </div>
-            )}
+      <div className="auth-card">
+        <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
+        <form onSubmit={handleSubmit}>
+          {!isLogin && (
             <div>
               <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                placeholder="Enter Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
               />
             </div>
+          )}
+          <div>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          {!isLogin && (
             <div>
               <input
                 type="password"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Confirm your password"
                 required
               />
             </div>
-            {!isLogin && (
-              <div>
-                <input
-                  type="password"
-                  placeholder="Confirm your password"
-                  required
-                />
-              </div>
-            )}
-            <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
-          </form>
-          <p>
-            {isLogin ? "Don't have an account?" : 'Already have an account?'}
-            <span onClick={toggleAuthMode}>
-              {isLogin ? ' Sign Up' : ' Login'}
-            </span>
-          </p>
-        </div>
-      )}
+          )}
+          <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
+        </form>
+        <p>
+          {isLogin ? "Don't have an account?" : 'Already have an account?'}
+          <span onClick={toggleAuthMode}>
+            {isLogin ? ' Sign Up' : ' Login'}
+          </span>
+        </p>
+      </div>
     </div>
   );
 };
