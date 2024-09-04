@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './Cattle.css';
 
@@ -44,16 +45,17 @@ const CattleDiagnosisChatbot = () => {
   };
 
   return (
-    <div className="chat-container">
-      <div className="chat-header">
+    <div className='cattle-main'>
+    <div className="cattle-chat-container">
+      <div className="cattle-chat-header">
         <h1>Cattle Disease Diagnosis</h1>
       </div>
-      <div className="chat-body">
-        <div className="chat-message bot">
+      <div className="cattle-chat-body">
+        <div className="cattle-chat-message bot">
           <p>Welcome! Please enter the Cattle ID and select the symptoms.</p>
         </div>
 
-        <div className="chat-message user">
+        {/* <div className="cattle-chat-message user">
           <label htmlFor="cattle-id">Cattle ID:</label>
           <input
             type="text"
@@ -63,10 +65,10 @@ const CattleDiagnosisChatbot = () => {
             onChange={(e) => setCattleId(e.target.value)}
             required
           />
-        </div>
+        </div> */}
 
         {['symptom1', 'symptom2', 'symptom3', 'symptom4', 'symptom5'].map((symptom, index) => (
-          <div className="chat-message user" key={symptom}>
+          <div className="cattle-chat-message user" key={symptom}>
             <label htmlFor={symptom}>{`Symptom ${index + 1}:`}</label>
             <select
               id={symptom}
@@ -85,17 +87,18 @@ const CattleDiagnosisChatbot = () => {
           </div>
         ))}
 
-        <div className="chat-message bot">
+        <div className="cattle-chat-message bot">
           <button type="button" onClick={diagnoseDisease}>Diagnose</button>
           <button type="button" onClick={resetSymptoms}>Reset Symptoms</button>
         </div>
 
         {result && (
-          <div className="chat-message bot" id="result">
+          <div className="cattle-chat-message bot" id="result">
             {result}
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };

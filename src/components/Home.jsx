@@ -24,7 +24,7 @@ const Home = () => {
           image="./Cattle.jpg"
           title="Cattle Service"
           description="Click here for cattle helthcare"
-          linkTo="/cattle"
+          linkToo="/cattle"
         />
         <Card
           image="./Crop1.jpg"
