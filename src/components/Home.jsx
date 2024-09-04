@@ -23,12 +23,13 @@ const Home = () => {
         <Card
           image="./Cattle.jpg"
           title="Cattle Service"
-          description="Card 1 description goes here."
+          description="Click here for cattle helthcare"
+          linkTo="/cattle"
         />
         <Card
           image="./Crop1.jpg"
           title="Crop Service"
-          description="Card 2 description goes here."
+          description="Click here for crop service"
         />
       </div>
     </div>

@@ -20,7 +20,7 @@ with app.app_context():
  
 @app.route("/")
 def hello_world():
-    return "Hello, World!"
+    return "Backend running fine!"
  
 @app.route("/signup", methods=["POST"])
 def signup():
@@ -80,6 +80,10 @@ def login_user():
         "username": user.username  # Return the username in the response
     })
 
+@app.route("/logout", methods=["POST"])
+def logout_user():
+    session.pop("user_id", None)
+    return jsonify({"message": "Successfully logged out"}), 200
 
 if __name__ == "__main__":
     app.run(debug=True)
