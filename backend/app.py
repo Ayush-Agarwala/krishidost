@@ -22,12 +22,19 @@ with app.app_context():
 def hello_world():
     return "Hello, World!"
  
-
 @app.route("/signup", methods=["POST"])
 def signup():
-    email = request.json["email"]
-    password = request.json["password"]
-    username = request.json["username"]  # Ensure you are retrieving the username from the request
+    print("Signup route hit!")  # Check if this line prints
+    data = request.json
+    print("Received data:", data)  # Print all received data for debugging
+
+    email = data.get("email")
+    password = data.get("password")
+    username = data.get("username")  # Use .get() to avoid KeyError
+
+    if not email and not password and not username:
+        print("Missing fields")  # Debugging
+        return jsonify({"error": "Missing required fields"}), 400
 
     user_exists = User.query.filter_by(email=email).first() is not None
     username_exists = User.query.filter_by(username=username).first() is not None
@@ -45,11 +52,15 @@ def signup():
 
     session["user_id"] = new_user.id
 
+    print("User created:", new_user.username)  # Debugging
+
     return jsonify({
         "id": new_user.id,
         "email": new_user.email,
-        "username": new_user.username  # Return the username in the response
+        "username": new_user.username
     })
+
+
 
 @app.route("/login", methods=["POST"])
 def login_user():
@@ -68,6 +79,7 @@ def login_user():
         "email": user.email,
         "username": user.username  # Return the username in the response
     })
+
 
 if __name__ == "__main__":
     app.run(debug=True)
