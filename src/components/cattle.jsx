@@ -52,7 +52,7 @@ const CattleDiagnosisChatbot = () => {
       </div>
       <div className="cattle-chat-body">
         <div className="cattle-chat-message bot">
-          <p>Welcome! Please enter the Cattle ID and select the symptoms.</p>
+          <p>Welcome! Please select the symptoms and click Diagnose.</p>
         </div>
 
         {/* <div className="cattle-chat-message user">

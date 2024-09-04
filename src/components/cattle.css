@@ -21,6 +21,7 @@
   .cattle-chat-header {
     text-align: center;
     margin-bottom: 20px;
+    color:#d4e157
   }
   
   .cattle-chat-body {
@@ -28,6 +29,7 @@
     flex-direction: column;
     /* justify-content: center; */
     /* align-items: center; */
+    color: #858e32;
   }
   
   .cattle-chat-message {
@@ -36,6 +38,7 @@
   
   .cattle-chat-message bot p{
     text-align: center;
+    color: #d4e157;
   }
 
   .cattle-chat-message label {
