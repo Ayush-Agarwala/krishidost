@@ -5,7 +5,8 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import Auth from './components/Auth';
-import CattleDiagnosisChatbot from './components/Cattle'
+import CattleDiagnosisChatbot from './components/Cattle';
+import CropRecommendationChatbot from './components/crop';
 
 const App = () => {
   const [loggedInUsername, setLoggedInUsername] = useState(null);
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/cattle" element={<CattleDiagnosisChatbot/>} />
+        <Route path="/crop" element={<CropRecommendationChatbot/>} />
         <Route path="/auth" element={<Auth setLoggedInUsername={setLoggedInUsername} />} />
       </Routes>
     </Router>

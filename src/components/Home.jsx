@@ -10,7 +10,7 @@ const Home = () => {
       <div className="home">
         <div className="overlay">
           <h1>Krishi Dost</h1>
-          <p>First friend of a Farmer</p>
+          <p>Friend for every Farmer</p>
         </div>
       </div>
 
@@ -30,6 +30,7 @@ const Home = () => {
           image="./Crop1.jpg"
           title="Crop Service"
           description="Click here for crop service"
+          linkToo="/crop"
         />
       </div>
     </div>

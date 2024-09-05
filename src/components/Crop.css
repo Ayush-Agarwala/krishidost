@@ -1,0 +1,78 @@
+/* Crop.css */
+
+/* Scope the styles to the specific component */
+.crop-main {
+    width: 95.5vw;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d4e157, #558b2f); /* Green gradient background */
+    padding: 50px 20px;
+  }
+  
+  .crop-chat-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto; /* Centers the container vertically and horizontally */
+    margin-bottom: 0px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .crop-chat-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d4e157; /* Light green for header text */
+  }
+  
+  .crop-chat-body {
+    display: flex;
+    flex-direction: column;
+    color: #858e32; /* Dark green for text */
+  }
+  
+  .crop-chat-message {
+    margin-bottom: 15px;
+  }
+  
+  .crop-chat-message label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .crop-chat-message input,
+  .crop-chat-message select {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .crop-chat-message button {
+    padding: 10px 15px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .crop-chat-message button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333; /* Darker text for the result */
+  }
+  
+  @media (max-width: 600px) {
+    .crop-chat-container {
+      width: 90%;
+    }
+  }
+  
