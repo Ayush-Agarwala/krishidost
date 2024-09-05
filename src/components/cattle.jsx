@@ -78,7 +78,7 @@ const CattleDiagnosisChatbot = () => {
               required
             >
               <option value="">Select a symptom</option>
-              <option value="fever">Fever</option>
+              <option value="fever">Fever, Anorexia</option>
               <option value="cough">Cough</option>
               <option value="diarrhea">Diarrhea</option>
               <option value="fatigue">Fatigue</option>
