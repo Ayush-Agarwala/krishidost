@@ -24,13 +24,31 @@ const CattleDiagnosisChatbot = () => {
   const diagnoseDisease = () => {
     if (cattleId && Object.values(symptoms).every(symptom => symptom !== '')) {
       setResult('Diagnosing...');
-      setTimeout(() => {
-        setResult(`Cattle ID: ${cattleId} may have a disease related to these symptoms: ${Object.values(symptoms).join(', ')}`);
-      }, 1000);
+      const requestBody = {
+        cattleId: cattleId,
+        symptoms: symptoms,
+      };
+  
+      fetch('http://localhost:5000/diagnose', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      })
+      .then(response => response.json())
+      .then(data => {
+        setResult(`Cattle ID: ${data.cattleId} has a predicted disease: ${data.predictedDisease}`);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setResult('An error occurred while diagnosing.');
+      });
     } else {
       alert('Please fill in all fields.');
     }
   };
+  
 
   const resetSymptoms = () => {
     setSymptoms({
