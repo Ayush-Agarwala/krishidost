@@ -91,3 +91,14 @@
 .services-header:after {
     right: 10%;
 }
+
+.lang{
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+    padding-left: 82%;
+    background: #89B958;
+}
+.hindi{
+    background-color: #518132;
+}
