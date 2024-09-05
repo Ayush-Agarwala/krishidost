@@ -22,7 +22,7 @@ const CattleDiagnosisChatbot = () => {
   };
 
   const diagnoseDisease = () => {
-    if (cattleId && Object.values(symptoms).every(symptom => symptom !== '')) {
+    if (Object.values(symptoms).every(symptom => symptom !== '')) {
       setResult('Diagnosing...');
       const requestBody = {
         cattleId: cattleId,
@@ -72,18 +72,6 @@ const CattleDiagnosisChatbot = () => {
         <div className="cattle-chat-message bot">
           <p>Welcome! Please select the symptoms and click Diagnose.</p>
         </div>
-
-        {/* <div className="cattle-chat-message user">
-          <label htmlFor="cattle-id">Cattle ID:</label>
-          <input
-            type="text"
-            id="cattle-id"
-            name="cattle-id"
-            value={cattleId}
-            onChange={(e) => setCattleId(e.target.value)}
-            required
-          />
-        </div> */}
 
         {['symptom1', 'symptom2', 'symptom3', 'symptom4', 'symptom5'].map((symptom, index) => (
           <div className="cattle-chat-message user" key={symptom}>
