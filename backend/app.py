@@ -114,7 +114,6 @@ def diagnose():
     data = request.json
 
     # Extract the symptoms from the request
-    cattle_id = data.get('cattleId', '')
     symptoms = data.get('symptoms', {})
 
     # Convert symptoms into the format expected by the model
@@ -136,7 +135,6 @@ def diagnose():
     predicted_disease = disease_list[prediction] if prediction < len(disease_list) else 'Unknown'
 
     return jsonify({
-        'cattleId': cattle_id,
         'predictedDisease': predicted_disease
     })
 
