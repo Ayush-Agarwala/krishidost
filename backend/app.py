@@ -114,31 +114,33 @@ def diagnose():
     data = request.json
 
     # Extract the symptoms from the request
-    symptoms = data.get('symptoms', {})
+    
+    # cattle_id = data.get('cattleId', '')
+    symptoms = data.get('symptoms', [])
 
     # Convert symptoms into the format expected by the model
     input_symptoms = [0] * len(symptoms_list)
-    for i, symptom in enumerate(symptoms_list):
-        if symptoms.get(f'symptom{i+1}') in symptoms_list:
-            input_symptoms[i] = 1
-
-    # Convert input_symptoms to DataFrame with the same feature names used during training
-    input_df = pd.DataFrame([input_symptoms], columns=symptoms_list)
+    for symptom in symptoms:
+        if symptom in symptoms_list:
+            input_symptoms[symptoms_list.index(symptom)] = 1
 
     # Predict using the pre-trained model
-    prediction = clf_model.predict(input_df)[0]
+    input_array = np.array([input_symptoms])
+    prediction = clf_model.predict(input_array)[0]
 
-    # Return the prediction as a JSON response
+    # Disease list for mapping prediction index to disease name
     disease_list = ['mastitis','blackleg','bloat','coccidiosis','cryptosporidiosis',
         'displaced_abomasum','gut_worms','listeriosis','liver_fluke','necrotic_enteritis','peri_weaning_diarrhoea',
-        ' rift_valley_fever','rumen_acidosis',
-        'traumatic_reticulitis','calf_diphtheria','foot_rot','foot_and_mouth','ragwort_poisoning','wooden_tongue','infectious_bovine_rhinotracheitis',
-'acetonaemia','fatty_liver_syndrome','calf_pneumonia','schmallen_berg_virus','trypanosomosis','fog_fever']  # Modify based on your model output
+        'rift_valley_fever','rumen_acidosis','traumatic_reticulitis','calf_diphtheria','foot_rot','foot_and_mouth',
+        'ragwort_poisoning','wooden_tongue','infectious_bovine_rhinotracheitis','acetonaemia','fatty_liver_syndrome',
+        'calf_pneumonia','schmallen_berg_virus','trypanosomosis','fog_fever']  # Modify based on your model output
     predicted_disease = disease_list[prediction] if prediction < len(disease_list) else 'Unknown'
 
     return jsonify({
+        #'cattleId': cattle_id,
         'predictedDisease': predicted_disease
     })
+
 
 
 if __name__ == "__main__":
