@@ -38,7 +38,7 @@ const CattleDiagnosisChatbot = () => {
       })
       .then(response => response.json())
       .then(data => {
-        setResult(`Cattle ID: ${data.cattleId} has a predicted disease: ${data.predictedDisease}`);
+        setResult(`predicted disease: ${data.predictedDisease}`);
       })
       .catch(error => {
         console.error('Error:', error);
@@ -84,11 +84,16 @@ const CattleDiagnosisChatbot = () => {
               required
             >
               <option value="">Select a symptom</option>
-              <option value="fever">Fever, Anorexia</option>
-              <option value="cough">Cough</option>
-              <option value="diarrhea">Diarrhea</option>
-              <option value="fatigue">Fatigue</option>
-              <option value="loss_of_appetite">Loss of Appetite</option>
+              <option value="anorexia">Anorexia</option>
+              <option value="lameness">	lameness</option>
+              <option value="rapid_breathing">rapid_breathing</option>
+              <option value="tachycardia">tachycardia</option>
+              <option value="unwillingness_to_move">unwillingness to move</option>
+              <option value="depression">depression</option>
+              <option value="fever">fever</option>
+              <option value="loss_of_appetite">loss_of_appetite</option>
+              <option value="milk_flakes">milk_flakes</option>
+              <option value="udder_swelling">udder_swelling</option>
             </select>
           </div>
         ))}

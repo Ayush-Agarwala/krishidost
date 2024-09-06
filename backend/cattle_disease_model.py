@@ -43,8 +43,8 @@ for i in range(0,len(l1)):
 print(l2)
 
 #Reading the Cattle training Dataset .csv file
-df=pd.read_csv("training.csv")
-DF= pd.read_csv('training.csv', index_col='prognosis')
+df=pd.read_csv("Training.csv")
+DF= pd.read_csv('Training.csv', index_col='prognosis')
 #Replace the values in the imported file by pandas by the inbuilt function replace in pandas.
 
 df.replace({'prognosis':{'mastitis':0,'blackleg':1,'bloat':2,'coccidiosis':3,'cryptosporidiosis':4,
@@ -112,7 +112,7 @@ print(X)
 print(y)
 
 #Reading the Cattle testing Dataset .csv file
-tr=pd.read_csv("testing.csv")
+tr=pd.read_csv("Testing.csv")
 
 #Using inbuilt function replace in pandas for replacing the values
 

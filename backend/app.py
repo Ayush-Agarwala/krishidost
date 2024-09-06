@@ -122,9 +122,11 @@ def diagnose():
         if symptoms.get(f'symptom{i+1}') in symptoms_list:
             input_symptoms[i] = 1
 
+    # Convert input_symptoms to DataFrame with the same feature names used during training
+    input_df = pd.DataFrame([input_symptoms], columns=symptoms_list)
+
     # Predict using the pre-trained model
-    input_array = np.array([input_symptoms])
-    prediction = clf_model.predict(input_array)[0]
+    prediction = clf_model.predict(input_df)[0]
 
     # Return the prediction as a JSON response
     disease_list = ['mastitis','blackleg','bloat','coccidiosis','cryptosporidiosis',
