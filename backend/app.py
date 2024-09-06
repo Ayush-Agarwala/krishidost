@@ -114,6 +114,7 @@ def diagnose():
     data = request.json
 
     # Extract the symptoms from the request
+    cattle_id = data.get('cattleId', '')
     symptoms = data.get('symptoms', {})
 
     # Convert symptoms into the format expected by the model
@@ -131,9 +132,9 @@ def diagnose():
     # Return the prediction as a JSON response
     disease_list = ['mastitis','blackleg','bloat','coccidiosis','cryptosporidiosis',
         'displaced_abomasum','gut_worms','listeriosis','liver_fluke','necrotic_enteritis','peri_weaning_diarrhoea',
-        ' rift_valley_fever','rumen_acidosis',
-        'traumatic_reticulitis','calf_diphtheria','foot_rot','foot_and_mouth','ragwort_poisoning','wooden_tongue','infectious_bovine_rhinotracheitis',
-'acetonaemia','fatty_liver_syndrome','calf_pneumonia','schmallen_berg_virus','trypanosomosis','fog_fever']  # Modify based on your model output
+        ' rift_valley_fever','rumen_acidosis','traumatic_reticulitis','calf_diphtheria','foot_rot','foot_and_mouth',
+        'ragwort_poisoning','wooden_tongue','infectious_bovine_rhinotracheitis','acetonaemia','fatty_liver_syndrome',
+        'calf_pneumonia','schmallen_berg_virus','trypanosomosis','fog_fever']  # Modify based on your model output
     predicted_disease = disease_list[prediction] if prediction < len(disease_list) else 'Unknown'
 
     return jsonify({
