@@ -133,7 +133,7 @@ def diagnose():
     input_data = np.array([input_symptoms])
 
     # Make the prediction
-    prediction = model.predict(input_data)
+    prediction = clf_model.predict(input_data)
     predicted_disease = disease[prediction[0]]
 
     # Return the result as JSON
