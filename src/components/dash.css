@@ -1,0 +1,78 @@
+/* Root container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6f5e8; /* Light green background */
+    width: 100vw;
+  }
+  
+  /* Dashboard card */
+  .dashboard {
+    width: 400px;
+    padding: 30px;
+    background-color: #f4e6d7; /* Light brown background */
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  .dashboard h1 {
+    text-align: center;
+    color: #4CAF50; /* Green heading */
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label */
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #5c4033; /* Dark brown labels */
+  }
+  
+  /* Input fields */
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8b7765; /* Light brown border */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #ffffff; /* White background */
+    color: green;
+  }
+  
+  /* Button */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Green button */
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Input focus effect */
+  .form-group input:focus {
+    outline: none;
+    border-color: #4CAF50; /* Green border on focus */
+    box-shadow: 0px 0px 3px rgba(76, 175, 80, 0.5);
+  }
+  

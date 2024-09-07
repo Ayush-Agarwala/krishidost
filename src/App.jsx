@@ -7,6 +7,7 @@ import AboutUs from './components/AboutUs';
 import Auth from './components/Auth';
 import CattleDiagnosisChatbot from './components/Cattle';
 import CropRecommendationChatbot from './components/crop';
+import Dashboard from './components/dashboard';
 
 const App = () => {
   const [loggedInUsername, setLoggedInUsername] = useState(null);
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/cattle" element={<CattleDiagnosisChatbot/>} />
         <Route path="/crop" element={<CropRecommendationChatbot/>} />
+        <Route path="/dash" element={<Dashboard/>} />
         <Route path="/auth" element={<Auth setLoggedInUsername={setLoggedInUsername} />} />
       </Routes>
     </Router>
