@@ -1,83 +1,94 @@
-/* Scope the styles to the specific component */
-.cattle-main{
-    width: 95.5vw;
-    height: 100%;
-    min-height: 100vh;
-    /* background-color: #558b2f; */
-    background: linear-gradient(135deg, #d4e157, #558b2f);
-    padding: 50px 20px;
+.cattle-main {
+  width: 95.5vw;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d4e157, #518132); /* Updated gradient for theme */
+  padding: 50px 20px;
 }
-.cattle-chat-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto; /* Centers the container vertically and horizontally */
-    margin-bottom: 0px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cattle-chat-header {
-    text-align: center;
-    margin-bottom: 20px;
-    color:#d4e157
-  }
-  
-  .cattle-chat-body {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    color: #858e32;
-  }
-  
-  .cattle-chat-message {
-    margin-bottom: 15px;
-  }
-  
-  .cattle-chat-message bot p{
-    text-align: center;
-    color: #d4e157;
-  }
 
-  .cattle-chat-message label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-  }
+.cattle-chat-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f6f3; /* Light background to contrast with theme colors */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #518132; /* Border matching theme */
+}
+
+.cattle-chat-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #558b2f; /* Theme-based header color */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cattle-chat-body {
+  display: flex;
+  flex-direction: column;
+  color: #6b8e23; /* Softer shade for text */
+}
+
+.cattle-chat-message {
+  margin-bottom: 15px;
+}
+
+.cattle-chat-message label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #558b2f; /* Theme color */
+}
+
+.cattle-chat-message input,
+.cattle-chat-message select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #518132; /* Theme-colored border */
+  border-radius: 5px;
+  background-color: #eef2e6; /* Light background to fit theme */
+  font-size: 14px;
+  color: #333;
+}
+.cattle-chat-message input{
+  max-width: 97.5%;
+}
+.cattle-chat-message bott{
+  display: flex;
+  justify-content: center;
+}
+.cattle-button{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.cattle-chat-message button {
+  padding: 10px 15px;
+  background-color: #518132; /* Theme color for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 48%;
   
-  .cattle-chat-message input,
-  .cattle-chat-message select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .cattle-chat-message button {
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  .cattle-chat-message button:hover {
-    background-color: #218838;
-  }
-  
-  #result {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  @media (max-width: 600px) {
-    .cattle-chat-container {
+}
+
+.cattle-chat-message button:hover {
+  background-color: #3d6b24; /* Darker shade of theme color */
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #518132; /* Matches theme color */
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .cattle-chat-container {
       width: 90%;
-    }
   }
-  
+}

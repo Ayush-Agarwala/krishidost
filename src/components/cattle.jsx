@@ -125,9 +125,11 @@ const CattleDiagnosisChatbot = () => {
           </div>
         ))}
 
-        <div className="cattle-chat-message bot">
+        <div className="cattle-chat-message bott">
+          <div className='cattle-button'>
           <button type="button" onClick={diagnoseDisease}>Diagnose</button>
           <button type="button" onClick={resetSymptoms}>Reset Symptoms</button>
+          </div>
         </div>
 
         {result && (

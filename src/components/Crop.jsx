@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './Crop.css';
 
@@ -56,7 +57,7 @@ const CropRecommendationChatbot = () => {
             <p>Welcome! Please enter the following parameters for crop recommendation.</p>
           </div>
 
-          {['nitrogen', 'phosphorus', 'potassium', 'temperature', 'humidity', 'ph', 'rainfall'].map((param, index) => (
+          {['Nitrogen', 'Phosphorus', 'Potassium', 'Temperature(Cel)', 'Humidity(%)', 'ph(0-14)', 'Rainfall(mm)'].map((param, index) => (
             <div className="crop-chat-message user" key={param}>
               <label htmlFor={param}>{`${param.charAt(0).toUpperCase() + param.slice(1)}:`}</label>
               <input
@@ -71,8 +72,10 @@ const CropRecommendationChatbot = () => {
           ))}
 
           <div className="crop-chat-message bot">
+            <div className='crop-button'>
             <button type="button" onClick={recommendCrops}>Recommend</button>
             <button type="button" onClick={resetInputs}>Reset</button>
+            </div>
           </div>
 
           {result && (
