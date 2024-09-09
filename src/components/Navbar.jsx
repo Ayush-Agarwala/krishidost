@@ -38,7 +38,7 @@ const Navbar = ({ loggedInUsername }) => {
           Services
         </a>
         {loggedInUsername ? (
-          <span>Welcome, {loggedInUsername}!</span>
+          <Link to="/dash">Welcome, {loggedInUsername}!</Link>
         ) : (
           <Link to="/auth">Login/Sign Up</Link>
         )}

@@ -7,11 +7,11 @@ import AboutUs from './components/AboutUs';
 import Auth from './components/Auth';
 import CattleDiagnosisChatbot from './components/Cattle';
 import CropRecommendationChatbot from './components/crop';
-import Dashboard from './components/dashboard';
+import Dashboard from './components/Dashboard';
 
 const App = () => {
   const [loggedInUsername, setLoggedInUsername] = useState(null);
-
+ 
   return (
     <Router>
       <Navbar loggedInUsername={loggedInUsername} />

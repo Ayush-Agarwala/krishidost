@@ -16,7 +16,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 SQLALCHEMY_ECHO = True
   
 bcrypt = Bcrypt(app) 
-CORS(app, supports_credentials=True)
+CORS(app, supports_credentials=True, origins=["http://localhost:5173"])
 db.init_app(app)
   
 with app.app_context():
@@ -88,6 +88,55 @@ def login_user():
 def logout_user():
     session.pop("user_id", None)
     return jsonify({"message": "Successfully logged out"}), 200
+
+# Route to get user data
+@app.route("/get_user_data", methods=["GET"])
+def get_user_data():
+    user_id = session.get("user_id")
+    print(f"Session User ID: {user_id}")  # Log session data for debugging
+
+    if not user_id:
+        return jsonify({"error": "User not logged in"}), 401
+
+    user = User.query.get(user_id)
+    if user:
+        return jsonify({
+            "id": user.id,
+            "email": user.email,
+            "username": user.username,
+            # "cattle_id": user.cattle_id,
+            # "area_in_acre": user.area_in_acre
+        })
+    else:
+        return jsonify({"error": "User not found"}), 404
+
+
+# Route to add cattle_id and area_in_acre
+@app.route("/add_user_data/<int:user_id>", methods=["PUT"])
+def add_user_data(user_id):
+    user = User.query.get(user_id)
+    if not user:
+        return jsonify({"error": "User not found"}), 404
+
+    data = request.json
+    cattle_id = data.get("cattle_id")
+    area_in_acre = data.get("area_in_acre")
+
+    if cattle_id:
+        user.cattle_id = cattle_id
+
+    if area_in_acre:
+        user.area_in_acre = area_in_acre
+
+    db.session.commit()
+
+    return jsonify({
+        "message": "User data updated successfully",
+        "cattle_id": user.cattle_id,
+        "area_in_acre": user.area_in_acre
+    })
+
+
 
 # Load the trained model (you should have saved the model previously using pickle)
 with open('cattle_disease_model.pkl', 'rb') as f:
