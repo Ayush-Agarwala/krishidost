@@ -76,3 +76,17 @@
     box-shadow: 0px 0px 3px rgba(76, 175, 80, 0.5);
   }
   
+  .logout-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #c9302c;
+  }
+  

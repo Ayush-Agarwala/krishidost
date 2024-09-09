@@ -34,6 +34,32 @@ const Dashboard = () => {
     fetchUserData();
   }, []);
 
+  const handleLogout = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/logout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include', // Send session cookies with the request
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert('Logged out successfully!');
+        // Optionally, redirect to login page or clear user data
+        setUserData(null);
+        window.location.href = '/'; // Redirect to login page after logout
+      } else {
+        alert(result.error || 'Logout failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error during logout:', error);
+      alert('An error occurred during logout. Please try again.');
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -48,8 +74,6 @@ const Dashboard = () => {
       area_in_acre: areaInAcre,
     };
 
-    console.log('Submitting data to add:', updatedData);  // Debugging
-
     try {
       const response = await fetch(`http://localhost:5000/add_user_data/${userData.id}`, {
         method: 'PUT',
@@ -63,7 +87,6 @@ const Dashboard = () => {
 
       if (response.ok) {
         alert('Cattle ID and Area added successfully!');
-        console.log('Add result:', result);
       } else {
         alert(result.error || 'Failed to add. Please try again.');
       }
@@ -108,8 +131,8 @@ const Dashboard = () => {
             />
           </div>
 
-          {/* Only display Cattle ID and Area input fields if they are not set }
-          {!userData?.cattle_id && (
+          {/* Cattle ID and Area input fields */}
+          {/* {!userData?.cattle_id && (
             <div className="form-group">
               <label>Cattle ID:</label>
               <input
@@ -131,12 +154,14 @@ const Dashboard = () => {
               />
             </div>
           )}
-*/}
-          {/* Disable submit button if fields already exist */}
-          {/* {(!userData?.cattle_id || !userData?.area_in_acre) && (
-            <button type="submit">Add</button>
-          )} */}
+
+          <button type="submit">Add</button> */}
         </form>
+
+        {/* Logout button */}
+        <button className="logout-button" onClick={handleLogout}>
+          Logout
+        </button>
       </div>
     </div>
   );
