@@ -8,18 +8,18 @@ const translations = {
     description: "Friend for every Farmer",
     ourservices:"Our Services",
     cattleService: "Cattle Service",
-    cropService: "Crop Service",
+    cropService: "Disease Info",
     cdisc:"Click here for cattle healthcare",
-    cropdis:"Click here for crop service"
+    cropdis:"Click to know more about the disease"
   },
   hi: {
     title: "कृषि दोस्त",
     description: "हर किसान के लिए मित्र",
     ourservices:"हमारी सेवाएँ",
     cattleService: "पशु सेवा",
-    cropService: "फसल सेवा",
+    cropService: "रोग की जानकारी",
     cdisc:"मवेशियों के स्वास्थ्य सेवा के लिए यहां क्लिक करें",
-    cropdis:"फसल सेवा के लिए यहां क्लिक करें",
+    cropdis:"रोग के बारे में अधिक जानने के लिए क्लिक करें",
   },
 };
 

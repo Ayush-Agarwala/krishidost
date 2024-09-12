@@ -28,7 +28,7 @@ const Navbar = ({ loggedInUsername }) => {
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">
-          <img src='./nav-logo.png' alt="Logo" />
+          <img src='./pd-logo-removebg-preview.png' alt="Logo" />
         </Link>
       </div>
       <div className="navbar-links">

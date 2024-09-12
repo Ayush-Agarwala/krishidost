@@ -5,7 +5,7 @@ import './Aboutus.css'; // Import external CSS file
 const AboutUs = () => {
     return (
         <div className='aboutus'>
-            <div className="about"><h1>About Us</h1></div>
+            <div className="about"><h1>Our Team</h1></div>
             <div className="team">
                 <div className="team-member">
                     <img src="ayush.JPG" alt="Person 1" />
