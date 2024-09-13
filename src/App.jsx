@@ -6,7 +6,7 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import Auth from './components/Auth';
 import CattleDiagnosisChatbot from './components/Cattle';
-import CropRecommendationChatbot from './components/crop';
+import DiseaseInfoComponent from './components/DiseaseInfo';
 import Dashboard from './components/Dashboard';
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/cattle" element={<CattleDiagnosisChatbot/>} />
-        <Route path="/crop" element={<CropRecommendationChatbot/>} />
+        <Route path="/DiseaseInfo" element={<DiseaseInfoComponent/>} />
         <Route path="/dash" element={<Dashboard/>} />
         <Route path="/auth" element={<Auth setLoggedInUsername={setLoggedInUsername} />} />
       </Routes>

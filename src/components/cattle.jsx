@@ -128,7 +128,7 @@ const CattleDiagnosisChatbot = () => {
         <div className="cattle-chat-message bott">
           <div className='cattle-button'>
           <button type="button" onClick={diagnoseDisease}>Diagnose</button>
-          <button type="button" onClick={resetSymptoms}>Reset Symptoms</button>
+          <button  style={{backgroundColor: "#D33A2C",color:"white"}} type="button" onClick={resetSymptoms}>Reset Symptoms</button>
           </div>
         </div>
 

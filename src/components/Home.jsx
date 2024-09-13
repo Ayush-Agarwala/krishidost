@@ -4,8 +4,8 @@ import Card from './Card';
 
 const translations = {
   en: {
-    title: "Krishi Dost",
-    description: "Friend for every Farmer",
+    title: "Pashu Doctor",
+    description: "Healthier Cattle, Happier Farmers",
     ourservices:"Our Services",
     cattleService: "Cattle Service",
     cropService: "Disease Info",
@@ -13,8 +13,8 @@ const translations = {
     cropdis:"Click to know more about the disease"
   },
   hi: {
-    title: "कृषि दोस्त",
-    description: "हर किसान के लिए मित्र",
+    title: "पशु डॉक्टर",
+    description: "स्वस्थ पशु, खुशहाल किसान",
     ourservices:"हमारी सेवाएँ",
     cattleService: "पशु सेवा",
     cropService: "रोग की जानकारी",
@@ -53,10 +53,10 @@ const Home = () => {
           linkToo="/cattle"
         />
         <Card
-          image="./Crop1.jpg"
+          image="./disease2.jpg"
           title={translations[language].cropService}
           description={translations[language].cropdis}
-          linkToo="/crop"
+          linkToo="/diseaseinfo"
         />
       </div>
       {/* Language Switch Buttons */}

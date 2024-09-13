@@ -1,4 +1,7 @@
-.cattle-main {
+/* DiseaseInfo.css */
+
+/* Scope the styles to the specific component */
+.disease_info {
   width: 95.5vw;
   height: 100%;
   min-height: 100vh;
@@ -6,7 +9,8 @@
   padding: 50px 20px;
 }
 
-.cattle-chat-container {
+
+.disease-info-container {
   width: 100%;
   max-width: 900px;
   margin: 40px auto;
@@ -17,7 +21,7 @@
   border: 1px solid #518132; /* Border matching theme */
 }
 
-.cattle-chat-header {
+.disease-info-header {
   text-align: center;
   margin-bottom: 20px;
   color: #558b2f; /* Theme-based header color */
@@ -25,25 +29,25 @@
   font-weight: bold;
 }
 
-.cattle-chat-body {
+.disease-info-body {
   display: flex;
   flex-direction: column;
   color: #6b8e23; /* Softer shade for text */
 }
 
-.cattle-chat-message {
+.disease-info-message {
   margin-bottom: 15px;
 }
 
-.cattle-chat-message label {
+.disease-info-message label {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
   color: #558b2f; /* Theme color */
 }
 
-.cattle-chat-message input,
-.cattle-chat-message select {
+.disease-info-message input,
+.disease-info-message select {
   width: 100%;
   padding: 10px;
   border: 1px solid #518132; /* Theme-colored border */
@@ -51,20 +55,26 @@
   background-color: #eef2e6; /* Light background to fit theme */
   font-size: 14px;
   color: #333;
+  margin-left: 10px;
 }
-.cattle-chat-message input{
+
+.disease-info-message input {
   max-width: 97.5%;
 }
-.cattle-chat-message bott{
-  display: flex;
-  justify-content: center;
-}
-.cattle-button{
+
+.disease-info-message button {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.cattle-chat-message button {
+
+.disease-info-button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.disease-info-message button {
   padding: 10px 15px;
   background-color: #518132; /* Theme color for buttons */
   color: white;
@@ -73,29 +83,11 @@
   cursor: pointer;
   font-size: 14px;
   width: 48%;
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: darkgreen;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
-.cattle-chat-message button:hover {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  /* transform: scale(1.05) rotate(-1deg); */
+.disease-info-message button:hover {
+  background-color: #3d6b24; /* Darker shade of theme color */
 }
-
 
 #result {
   margin-top: 20px;
@@ -105,7 +97,7 @@
 }
 
 @media (max-width: 600px) {
-  .cattle-chat-container {
-      width: 90%;
+  .disease-info-container {
+    width: 90%;
   }
 }
