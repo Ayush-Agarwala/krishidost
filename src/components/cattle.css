@@ -66,7 +66,7 @@
 }
 .cattle-chat-message button {
   padding: 10px 15px;
-  background-color: #518132; /* Theme color for buttons */
+  /* background-color: #518132; /* Theme color for buttons */
   color: white;
   border: none;
   border-radius: 5px;
@@ -92,6 +92,7 @@
 }
 
 .cattle-chat-message button:hover {
+  background-color: #c2fbd7;
   box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
   /* transform: scale(1.05) rotate(-1deg); */
 }
@@ -108,4 +109,23 @@
   .cattle-chat-container {
       width: 90%;
   }
+}
+
+/* Cattle.css */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.loading-gif {
+  width: 100px;
+  margin-bottom: 10px; /* Space between GIF and text */
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #555; /* Gray color for text */
 }

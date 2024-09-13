@@ -102,3 +102,26 @@
 .hindi{
     background-color: #518132;
 }
+/* Home.css */
+/* Home.css */
+.loading-indicator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw;
+  }
+  
+  .loading-indicator img {
+    width: 100px; /* Adjust the size of the loading GIF */
+    margin-bottom: 10px; /* Space between the GIF and the text */
+  }
+  
+  .loading-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555; /* Grayish color for the text */
+  }
+  
+  

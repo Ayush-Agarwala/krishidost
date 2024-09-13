@@ -28,6 +28,7 @@ const CattleDiagnosisChatbot = () => {
     symptom5: '',
   });
   const [result, setResult] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -44,6 +45,7 @@ const CattleDiagnosisChatbot = () => {
   const diagnoseDisease = () => {
     if (cattleId && Object.values(symptoms).every(symptom => symptom !== '')) {
       setResult('Diagnosing...');
+      setIsLoading(true);
       const requestBody = {
         cattleId: cattleId,
         symptoms: symptoms,
@@ -58,10 +60,12 @@ const CattleDiagnosisChatbot = () => {
       })
       .then(response => response.json())
       .then(data => {
+        setIsLoading(false);
         setResult(`Predicted Disease: ${data.predictedDisease}`);
       })
       .catch(error => {
         console.error('Error:', error);
+        setIsLoading(false);
         setResult('An error occurred while diagnosing.');
       });
     } else {
@@ -128,17 +132,48 @@ const CattleDiagnosisChatbot = () => {
         <div className="cattle-chat-message bott">
           <div className='cattle-button'>
           <button type="button" onClick={diagnoseDisease}>Diagnose</button>
-          <button  style={{backgroundColor: "#D33A2C",color:"white"}} type="button" onClick={resetSymptoms}>Reset Symptoms</button>
+          <button
+            style={{
+              backgroundColor: "#f7d7da",
+              color: "#D33A2C",
+              borderRadius: "100px",
+              boxShadow:
+                "rgba(211, 58, 44, 0.2) 0 -25px 18px -14px inset, rgba(211, 58, 44, 0.15) 0 1px 2px, rgba(211, 58, 44, 0.15) 0 2px 4px, rgba(211, 58, 44, 0.15) 0 4px 8px, rgba(211, 58, 44, 0.15) 0 8px 16px, rgba(211, 58, 44, 0.15) 0 16px 32px",
+              padding: "10px 20px",
+              border: "none",
+              cursor: "pointer",
+              transition: "box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.target.style.boxShadow =
+                "rgba(211, 58, 44, 0.35) 0 -25px 18px -14px inset, rgba(211, 58, 44, 0.25) 0 1px 2px, rgba(211, 58, 44, 0.25) 0 2px 4px, rgba(211, 58, 44, 0.25) 0 4px 8px, rgba(211, 58, 44, 0.25) 0 8px 16px, rgba(211, 58, 44, 0.25) 0 16px 32px")
+            }
+            onMouseLeave={(e) =>
+              (e.target.style.boxShadow =
+                "rgba(211, 58, 44, 0.2) 0 -25px 18px -14px inset, rgba(211, 58, 44, 0.15) 0 1px 2px, rgba(211, 58, 44, 0.15) 0 2px 4px, rgba(211, 58, 44, 0.15) 0 4px 8px, rgba(211, 58, 44, 0.15) 0 8px 16px, rgba(211, 58, 44, 0.15) 0 16px 32px")
+            }
+            type="button"
+            onClick={resetSymptoms}
+          >
+            Reset Symptoms
+          </button>
+
+
           </div>
         </div>
 
-        {result && (
-          <div className="cattle-chat-message bot" id="result">
-            {result}
+        <div className="cattle-chat-message bot" id="result">
+            {isLoading ? (
+              <div className="loading-container">
+                <img src="./running-cow.gif" alt="Loading..." className="loading-gif" />
+                <p className="loading-text">Diagnosing...</p>
+              </div>
+            ) : (
+              result && <div>{result}</div>
+            )}
           </div>
-        )}
+        </div>
       </div>
-    </div>
     </div>
   );
 };
