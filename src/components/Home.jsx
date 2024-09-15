@@ -9,7 +9,6 @@ const translations = {
     title: "Pashu Doctor",
     description: "Healthier Cattle, Happier Farmers",
     ourservices:"Our Services",
-
     cattleService: "Cattle Service",
     cropService: "Disease Info",
     cdisc: "Click here for cattle healthcare",
@@ -20,8 +19,6 @@ const translations = {
     title: "पशु डॉक्टर",
     description: "स्वस्थ पशु, खुशहाल किसान",
     ourservices:"हमारी सेवाएँ",
-
-
     cattleService: "पशु सेवा",
     cropService: "रोग की जानकारी",
     cdisc: "मवेशियों के स्वास्थ्य सेवा के लिए यहां क्लिक करें",

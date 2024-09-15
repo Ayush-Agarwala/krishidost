@@ -2,7 +2,19 @@ import React, { useState } from 'react';
 import './DiseaseInfo.css';
 
 const diseaseImages = {
+  mastitis: './mastitis.jpg',
   blackleg: './back-leg.jpg',
+  bloat:'./bloat.jpg',
+  coccidiosis: './coccidiosis.jpg',
+  cryptosporidiosis: './cryptosporidiosis.jpg',
+  displaced_abomasum:'./displaced_abomasum.jpg',
+  gut_worms:'./gut_worms.jpg',
+  listeriosis:'./llisteriosis.png',
+  liver_fluke:'./liver_fluke.jpg',
+  foot_rot:'./foot_rot.jpg,',
+  wooden_tongue:'./wooden_tounge.jpg',
+  fatty_liver_syndrome:'./fatty_liver.jpg',
+  ragwort_poisoning:'./ragwort.jpg'
 }
 
 const diseaseInfo = {
