@@ -96,6 +96,9 @@
   text-align: center;
 }
 
+.warn{
+  color:red;
+}
 @media (max-width: 600px) {
   .disease-info-container {
     width: 90%;

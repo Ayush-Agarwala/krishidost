@@ -14,7 +14,8 @@ const diseaseImages = {
   foot_rot:'./foot_rot.jpg,',
   wooden_tongue:'./wooden_tounge.jpg',
   fatty_liver_syndrome:'./fatty_liver.jpg',
-  ragwort_poisoning:'./ragwort.jpg'
+  ragwort_poisoning:'./ragwort.jpg',
+  calf_diphtheria:'./calf_diphtheria.jpg'
 }
 
 const diseaseInfo = {
@@ -46,23 +47,28 @@ const diseaseInfo = {
   fog_fever: "A non-infectious condition caused by cattle grazing on lush pasture, leading to acute respiratory distress. Prevention involves gradual introduction to new pastures and diet management."
 };
 
-
 const DiseaseInfoComponent = () => {
   const [selectedDisease, setSelectedDisease] = useState('');
   const [info, setInfo] = useState('');
+  const [imageError, setImageError] = useState(false); // State to track image load error
 
   const handleInputChange = (e) => {
     const disease = e.target.value;
     setSelectedDisease(disease);
     setInfo(diseaseInfo[disease] || 'No information available for this disease.');
+    setImageError(false); // Reset image error when a new disease is selected
+  };
+
+  const handleImageError = () => {
+    setImageError(true); // Set imageError to true when the image fails to load
   };
 
   return (
     <div className='disease_info'>
-    <div className="disease-info-container">
-      <h2>Cattle Disease Information</h2>
+      <div className="disease-info-container">
+        <h2>Cattle Disease Information</h2>
 
-      <div className="disease-select">
+        <div className="disease-select">
         <label htmlFor="disease">Select Disease: </label>
         <select id="disease" value={selectedDisease} onChange={handleInputChange}>
         <option value="">-- Select a Disease --</option>
@@ -92,28 +98,33 @@ const DiseaseInfoComponent = () => {
           <option value="schmallen_berg_virus">Schmallenberg Virus</option>
           <option value="trypanosomosis">Trypanosomosis</option>
           <option value="fog_fever">Fog Fever</option>
-
-        </select>
-      </div>
-
-      {info && (
-        <div className="disease-details">
-          <h3>Disease Information:</h3>
-          <p>{info}</p>
+          </select>
         </div>
-      )}
-      {selectedDisease && (
-            <div className="cattle-chat-message">
-              <h2>{selectedDisease.replace(/_/g, ' ').toUpperCase()}</h2>
+
+        {info && (
+          <div className="disease-details">
+            <h3>Disease Information:</h3>
+            <p>{info}</p>
+            <div className='warn'><p>Warning: Images might be unpleasent! </p></div>
+          </div>
+        )}
+        
+        {selectedDisease && (
+          <div className="cattle-chat-message">
+            <h2>{selectedDisease.replace(/_/g, ' ').toUpperCase()}</h2>
+            {imageError ? (
+              <p>Internal disease image not available</p> // Fallback message when image fails to load
+            ) : (
               <img
                 src={`/${diseaseImages[selectedDisease]}`}
                 alt={selectedDisease}
+                onError={handleImageError} // Trigger when the image fails to load
                 style={{ width: '100%', objectFit: 'cover' }}
               />
-              {/* <p>{diseaseDescriptions[selectedDisease]}</p> */}
-            </div>
-          )}
-    </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

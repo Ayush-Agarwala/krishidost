@@ -96,11 +96,36 @@
     display: flex;
     justify-content: space-between;
     align-items: centre;
-    padding-left: 82%;
+    padding-right: 82%;
     background: #89B958;
 }
 .hindi{
-    background-color: #518132;
+margin: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  /* Change to green box-shadow */
+  box-shadow: 0px 0px 14px -7px #1e7e34; 
+  /* Darker green gradient */
+  background-image: linear-gradient(45deg, #28a745 0%, #218838 51%, #28a745 100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.hindi:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 /* Home.css */
 /* Home.css */

@@ -93,7 +93,7 @@ const CattleDiagnosisChatbot = () => {
       </div>
       <div className="cattle-chat-body">
         <div className="cattle-chat-message bot">
-          <p>Welcome! Please enter the Cattle ID, select symptoms, and click Diagnose.</p>
+          <p>Welcome! Please enter the Cattle ID, select symptoms(लक्षण), and click Diagnose(निदान).</p>
         </div>
 
         <div className="cattle-chat-message user">
@@ -131,7 +131,7 @@ const CattleDiagnosisChatbot = () => {
 
         <div className="cattle-chat-message bott">
           <div className='cattle-button'>
-          <button type="button" onClick={diagnoseDisease}>Diagnose</button>
+          <button type="button" onClick={diagnoseDisease}>Diagnose(निदान)</button>
           <button
             style={{
               backgroundColor: "#f7d7da",
@@ -155,7 +155,7 @@ const CattleDiagnosisChatbot = () => {
             type="button"
             onClick={resetSymptoms}
           >
-            Reset Symptoms
+            Reset Symptoms(फिर से भरें)
           </button>
 
 
