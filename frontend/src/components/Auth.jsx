@@ -18,7 +18,7 @@ const Auth = ({ setLoggedInUsername }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const url = isLogin ? 'http://localhost:5000/login' : 'http://localhost:5000/signup';
+    const url = isLogin ? 'http://ec2-13-233-91-41.ap-south-1.compute.amazonaws.com:8080/login' : 'http://ec2-13-233-91-41.ap-south-1.compute.amazonaws.com:8080/signup';
     const userData = {
       email,
       password,
