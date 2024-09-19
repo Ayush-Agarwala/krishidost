@@ -134,7 +134,7 @@ const CattleDiagnosisChatbot = () => {
       };
       
 
-      fetch("http://localhost:5000/diagnose", {
+      fetch("http://ec2-13-233-91-41.ap-south-1.compute.amazonaws.com:8080/diagnose", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -10,7 +10,7 @@ const Dashboard = () => {
     // Fetch user data from the backend when the component mounts
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/get_user_data', {
+        const response = await fetch('http://ec2-13-233-91-41.ap-south-1.compute.amazonaws.com:8080/get_user_data', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const Dashboard = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:5000/logout', {
+      const response = await fetch('http://ec2-13-233-91-41.ap-south-1.compute.amazonaws.com:8080/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const Dashboard = () => {
     };
 
     try {
-      const response = await fetch(`http://localhost:5000/add_user_data/${userData.id}`, {
+      const response = await fetch(`http://ec2-13-233-91-41.ap-south-1.compute.amazonaws.com:8080/add_user_data/${userData.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
