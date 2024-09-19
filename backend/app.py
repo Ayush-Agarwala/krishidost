@@ -16,7 +16,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 SQLALCHEMY_ECHO = True
   
 bcrypt = Bcrypt(app) 
-CORS(app, supports_credentials=True, origins=["http://localhost:5173"])
+CORS(app, supports_credentials=True, origins=["*"])
 db.init_app(app)
   
 with app.app_context():
@@ -189,4 +189,4 @@ def diagnose():
     return jsonify({'predictedDisease': predicted_disease})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=8080)
