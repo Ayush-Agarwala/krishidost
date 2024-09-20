@@ -12,22 +12,53 @@ const AboutUs = () => {
                     <img src="ayush.JPG" alt="Person 1" />
                     <h2>AYUSH AGARWALA</h2>
                     <p>FRONTEND DEVELOPER</p>
+                    <div className="social-links">
+                        <a href="https://www.linkedin.com/in/ayush-agarwala-b7055221a/" target="_blank" rel="noopener noreferrer">
+                            <img src="linkedin.png" alt="LinkedIn" className="social-icon" />
+                        </a>
+                        <a href="https://github.com/ayushagarwala" target="_blank" rel="noopener noreferrer">
+                            <img src="github.png" alt="GitHub" className="social-icon" />
+                        </a>
+                    </div>
                 </div>
                 <div className="team-member">
                     <img src="aman.jpg" alt="Person 2" />
                     <h2>AMAN HOSSAIN</h2>
                     <p>BACKEND DEVELOPER</p>
+                    <div className="social-links">
+                        <a href="https://linkedin.com/in/amanhossain" target="_blank" rel="noopener noreferrer">
+                            <img src="linkedin.png" alt="LinkedIn" className="social-icon" />
+                        </a>
+                        <a href="https://github.com/amanhossain" target="_blank" rel="noopener noreferrer">
+                            <img src="github.png" alt="GitHub" className="social-icon" />
+                        </a>
+                    </div>
                 </div>
                 <div className="team-member">
                     <img src="ris.jpeg" alt="RISHAV GHATAK" />
                     <h2>RISHAV GHATAK</h2>
-                    <p>DATA-SCIENCE & ML DEVELOPER</p>
-                    {/* <p>email: rishavghatak@gmail.com</p> */}
+                    <p>ML DEVELOPER</p>
+                    <div className="social-links">
+                        <a href="https://www.linkedin.com/in/rishav-ghatak/ " target="_blank" rel="noopener noreferrer">
+                            <img src="linkedin.png" alt="LinkedIn" className="social-icon" />
+                        </a>
+                        <a href="https://github.com/rishavghatak" target="_blank" rel="noopener noreferrer">
+                            <img src="github.png" alt="GitHub" className="social-icon" />
+                        </a>
+                    </div>
                 </div>
                 <div className="team-member">
                     <img src="dotted.jpg" alt="Person 4" />
                     <h2>AYUSH DUTTA</h2>
                     <p>DEPLOYMENT ENGINEER</p>
+                    <div className="social-links">
+                        <a href="https://linkedin.com/in/ayushdutta" target="_blank" rel="noopener noreferrer">
+                            <img src="linkedin.png" alt="LinkedIn" className="social-icon" />
+                        </a>
+                        <a href="https://github.com/ayushdutta" target="_blank" rel="noopener noreferrer">
+                            <img src="github.png" alt="GitHub" className="social-icon" />
+                        </a>
+                    </div>
                 </div>
             </div>
             {/* Our Mission Section */}
@@ -44,11 +75,24 @@ const AboutUs = () => {
             </div>
             {/* Contact Us Card */}
             <div className="contact-card">
-                <h2>Contact Us</h2>
-                <p><strong>Phone No:</strong> +91-7370864294</p>
-                <p><strong>Email:</strong> pashudr@gmail.com</p>
-                <p><strong>X (Twitter):</strong> @PashuDoctor</p>
+            <h2>Contact Us</h2>
+            
+            <div className="contact-info-group">
+                <div className="contact-info">
+                    <img src="mail.png" alt="Mail Icon" className="contact-icon" />
+                    <p><strong>pashudr@gmail.com</strong></p>
+                </div>
+                <div className="contact-info">
+                    <img src="call.png" alt="Call Icon" className="contact-icon" />
+                    <p><strong>+91-7370864294</strong></p>
+                </div>
+                <div className="contact-info">
+                    <img src="twitter.png" alt="Twitter Icon" className="contact-icon" />
+                    <p><strong>@PashuDoctor</strong></p>
+                </div>
             </div>
+        </div>
+
         </div>
     );
 };

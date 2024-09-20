@@ -35,8 +35,8 @@
   }
   
   .navbar-links a:hover {
-    color: green;
-    text-decoration: underline;
+    color: darkgreen;
+    /* text-decoration: underline; */
   }
 
   .navbar-links span{
@@ -53,3 +53,7 @@
     text-decoration: underline;
   }
   
+  .navbar-links a.active {
+    color: #28a745;
+    text-decoration: underline;
+}

@@ -1,58 +1,5 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F9E8B7;
-    text-align: center;
-}
-
-.about{
-    margin-top: 20px;
-    color: #518132;
-    font-family:Ubuntu;
-}
-
-.team {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-
-.team-member {
-    background-color: #518132;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    padding: 20px;
-    text-align: center;
-}
-
-.team-member img {
-    border-radius: 10%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.team-member h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
-    color:#d2db1a;
-}
-
-.team-member p {
-    font-size: 1em;
-    color:#F9E8B7;
-} */
-
-
-
 /* General Styling */
 .aboutus {
-    /* height: 100vh; */
     width: 95.5vw;
     padding: 50px 20px;
     background-color: #F9E8B7;
@@ -69,7 +16,6 @@
 
 .team {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     gap: 30px;
 }
@@ -108,30 +54,109 @@
     color: #0e1313;
 }
 
-.team-member .email {
-    font-size: 14px;
-    color: #2980b9;
-    word-break: break-word;
+/* Social Links */
+.social-links {
     margin-top: 10px;
-    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
 }
 
 .mission-card, .contact-card {
     background-color: #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     margin: 20px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.mission-card:hover, .contact-card:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .mission-card h2, .contact-card h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #217621;
+    font-size: 28px;
+    text-align: center;
 }
 
-.contact-card p {
-    margin: 5px 0;
+
+/* Contact Us Styling */
+/* Contact Us Styling */
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
 }
+
+.contact-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Ensure all contact details are in one line */
+.contact-info-group {
+    display: flex;
+    justify-content: space-between; /* Add spacing between icons */
+    align-items: center;
+    gap: 40px; /* Adjust gap as needed */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info img {
+    width: 25px; /* Adjust the size of the icons */
+    height: 25px;
+    margin-right: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.contact-info p strong {
+    font-weight: 700;
+}
+
+/* Icon hover effect */
+.contact-info img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive: Stack icons vertically on smaller screens */
+@media (max-width: 768px) {
+    .contact-info-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .team-member {

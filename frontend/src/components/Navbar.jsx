@@ -32,15 +32,15 @@ const Navbar = ({ loggedInUsername }) => {
         </Link>
       </div>
       <div className="navbar-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
-        <a href="#services" onClick={handleServicesClick}>
+        <Link className={location.pathname === '/' ? 'active' : ''} to="/">Home</Link>
+        <Link className={location.pathname === '/about' ? 'active' : ''} to="/about">About Us</Link>
+        <a href="#services" className={location.hash === '#services' ? 'active' : ''} onClick={handleServicesClick}>
           Services
         </a>
         {loggedInUsername ? (
-          <Link to="/dash">Welcome, {loggedInUsername}!</Link>
+          <Link to="/dash" className={location.pathname === '/dash' ? 'active' : ''}>Welcome, {loggedInUsername}!</Link>
         ) : (
-          <Link to="/auth">Login/Sign Up</Link>
+          <Link to="/auth" className={location.pathname === '/auth' ? 'active' : ''}>Login/Sign Up</Link>
         )}
       </div>
     </nav>
