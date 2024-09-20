@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './DiseaseInfo.css';
 
@@ -15,7 +16,8 @@ const diseaseImages = {
   wooden_tongue:'./wooden_tounge.jpg',
   fatty_liver_syndrome:'./fatty_liver.jpg',
   ragwort_poisoning:'./ragwort.jpg',
-  calf_diphtheria:'./calf_diphtheria.jpg'
+  calf_diphtheria:'./calf_diphtheria.jpg',
+  lumpy:'./lumpy.jpeg'
 }
 
 const diseaseInfo = {
@@ -44,7 +46,8 @@ const diseaseInfo = {
   calf_pneumonia: "A respiratory infection that affects young calves, leading to coughing, fever, and difficulty breathing. Treatment includes antibiotics, and prevention focuses on good ventilation and reducing stress.",
   schmallen_berg_virus: "A viral disease transmitted by midges, causing birth defects and abortions in cattle. There is no specific treatment, but control focuses on managing the vector population and breeding timing.",
   trypanosomosis: "Also known as sleeping sickness, caused by Trypanosoma parasites transmitted by tsetse flies. It leads to fever, anemia, and weight loss. Treatment involves anti-parasitic drugs, and controlling the fly population is essential.",
-  fog_fever: "A non-infectious condition caused by cattle grazing on lush pasture, leading to acute respiratory distress. Prevention involves gradual introduction to new pastures and diet management."
+  fog_fever: "A non-infectious condition caused by cattle grazing on lush pasture, leading to acute respiratory distress. Prevention involves gradual introduction to new pastures and diet management.",
+  lumpy:"LSD is a disease of cattle characterised by fever, nodules on the skin, mucous membranes and internal organs, emaciation, enlarged lymph nodes, oedema of the skin, and sometimes death"
 };
 
 const DiseaseInfoComponent = () => {
@@ -98,6 +101,7 @@ const DiseaseInfoComponent = () => {
           <option value="schmallen_berg_virus">Schmallenberg Virus</option>
           <option value="trypanosomosis">Trypanosomosis</option>
           <option value="fog_fever">Fog Fever</option>
+          <option value="lumpy">Lumpy Skin Disease</option>
           </select>
         </div>
 
