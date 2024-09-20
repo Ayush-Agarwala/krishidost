@@ -14,22 +14,24 @@ Offers personalized treatment recommendations based on reported symptoms.
 Enhances livestock productivity by making informed decisions through real-time data insights.
 ## Tech Stack
 ## Frontend:
--JavaScript
--CSS
--React
+- JavaScript
+- CSS
+- React
 # #Backend + Machine Learning:
--Python
--Flask
--Pandas
--Sklearn
--Seaborn
--Numpy
+- Python
+- Flask
+- Pandas
+- Sklearn
+- Seaborn
+- Numpy
 ## Deployment:
 Amazon AWS
+link: http://ec2-13-233-91-41.ap-south-1.compute.amazonaws.com:3000/
 ## How It Works
 Farmers input the symptoms of their cattle into the platform.
 The AI-powered backend processes this data and predicts potential diseases.
 The system provides tailored treatment recommendations based on the diagnosis.
 Farmers can access real-time insights to manage the health and productivity of their livestock efficiently.
+
 ![WhatsApp Image 2024-09-20 at 9 02 51 PM](https://github.com/user-attachments/assets/c5da57e8-aa08-442d-acb7-8ffae895675b)
 
