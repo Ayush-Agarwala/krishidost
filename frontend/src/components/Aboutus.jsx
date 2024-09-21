@@ -16,7 +16,7 @@ const AboutUs = () => {
                         <a href="https://www.linkedin.com/in/ayush-agarwala-b7055221a/" target="_blank" rel="noopener noreferrer">
                             <img src="linkedin.png" alt="LinkedIn" className="social-icon" />
                         </a>
-                        <a href="https://github.com/ayushagarwala" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/Ayush-Agarwala" target="_blank" rel="noopener noreferrer">
                             <img src="github.png" alt="GitHub" className="social-icon" />
                         </a>
                     </div>
@@ -26,10 +26,10 @@ const AboutUs = () => {
                     <h2>AMAN HOSSAIN</h2>
                     <p>BACKEND DEVELOPER</p>
                     <div className="social-links">
-                        <a href="https://linkedin.com/in/amanhossain" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/aman-hossain-53a893242/" target="_blank" rel="noopener noreferrer">
                             <img src="linkedin.png" alt="LinkedIn" className="social-icon" />
                         </a>
-                        <a href="https://github.com/amanhossain" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/amano2" target="_blank" rel="noopener noreferrer">
                             <img src="github.png" alt="GitHub" className="social-icon" />
                         </a>
                     </div>
@@ -42,7 +42,7 @@ const AboutUs = () => {
                         <a href="https://www.linkedin.com/in/rishav-ghatak/ " target="_blank" rel="noopener noreferrer">
                             <img src="linkedin.png" alt="LinkedIn" className="social-icon" />
                         </a>
-                        <a href="https://github.com/rishavghatak" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/rishav-gh" target="_blank" rel="noopener noreferrer">
                             <img src="github.png" alt="GitHub" className="social-icon" />
                         </a>
                     </div>
